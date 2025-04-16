@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .bg-mycolor{
+            background:rgb(10, 20, 10)
+        }
+        .txt-mycolor{
+            color:black;
+        }
+        .fa-brands:hover
+        {
+        transform:rotate(360deg);
+        transition:all 2s;
+        background:white;
+<!--        color:#1C768F;-->
+        }
+        .fa-square-facebook:hover{
+            color:#1877F2;
+            }
+            .fa-square-twitter:hover{
+            color:#1DA1F2;
+            }
+            .fa-square-instagram:hover{
+            color:#DD2A7B;
+            }
+            .fa-square-whatsapp:hover{
+            color:#128C7E
+            }
+            .fa-square-youtube:hover{
+            color:#FF0000;
+            }
+            .fa-linkedin:hover{
+            color:#0e76a8;
+            }
+    </style>
+
+</head>
+<body>
+    <div class='container-fluid'>
+        <div class='row  t1 text-center bg-mycolor text-light py-1'>
+            <div class='col-lg-5 col-md-6 col-sm-12'>
+                <i class="fa-solid fa-phone-volume fa-shake"></i> +91,8174941029
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <i class="fa-solid fa-envelopes-bulk"></i> swettrivedi981@gmail.com
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <i class="fa-brands fa-square-facebook iconA"></i>
+                <i class="fa-brands fa-square-twitter iconA"></i>
+                <i class="fa-brands fa-square-instagram iconA"></i>
+                <i class="fa-brands fa-linkedin icon iconA"></i>
+            </div>
+        </div>
+        <div class='row t2'>
+            <div class='col-sm-10 mx-auto'>
+                <div class='row my-2'>
+                    <div class="col-sm-4 fs-2">
+                        Grocery<b class="txt-mycolor">Shop
+                                <marquee behavior="" direction="right"><i class="fa-solid fa-truck-fast"></i></b></marquee>
+                </div>
+            </div>    
+        <div>
+    </div>
+    <nav class=" navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
