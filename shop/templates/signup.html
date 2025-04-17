@@ -1,6 +1,6 @@
-{% comment %} {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-{% block content %} {% endcomment %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +56,7 @@
     }
     .logo4{
 
-    }
+    } 
     #r1{
     height:300px;
     width:600px;
@@ -64,7 +64,6 @@
 </style>
 </head>
 <body>
-<div class="row signup my-3"style="margin-left:20px;">
   <div class="text-center fs-1 my-2">
     Sign <b class="txt-mycolor">Up<i class="fa-solid fa-address-card"></i></b>
   </div>
@@ -72,20 +71,24 @@
 <div class="row bg-mycolor">
     <div class="col-sm-10 mx-auto ">
         <div class="row">
-                <div class="col-sm-7 form1 text-light pt-2">
+                <div class="col-sm-7 form1 text-light pt-5">
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                 <b style="font-family:compact;font-size:20px;">Name</b><input type="text" required name="name" placeholder="Name" class="form-control"/>
                 <b style="font-family:compact;font-size:20px;">Email</b><input type="text" required name="email" placeholder="@gmail.com" class="form-control"/>
                 <b style="font-family:compact;font-size:20px;">Mobile</b><input type="text" required name="mobile" placeholder="Mobile" class="form-control"/>
                 <b style="font-family:compact;font-size:20px;">Password</b><input type="password" required name="passwd" placeholder="Password" class="form-control"/>
-                <b style="font-family:compact;font-size:20px;">Profile Picture</b><input type="file" required name="fu" class="form-control"/>
-                <b style="font-family:compact;font-size:20px;">Address</b><textarea class="form-control" name="address" placeholder="Address"></textarea>
-                        <input type="submit" value="SAVE" class="btn bg-mycolor text-light mb-5 mt-2"/>
+                <b style="font-family:compact;font-size:20px;">Password Again</b><input type="password" required name="passwd2" placeholder="Password" class="form-control"/><br>
+                {% if messages %}
+                {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} mb-2" style="color:red; font-size:15px;" {% endif %}>{{message}}</p>
+                {% endfor %}
+              {% endif %}
+                {% comment %} <b style="font-family:compact;font-size:20px;">Profile Picture</b><input type="file" required name="fu" class="form-control"/> {% endcomment %}
+                {% comment %} <b style="font-family:compact;font-size:20px;">Address</b><textarea class="form-control" name="address" placeholder="Address"></textarea> {% endcomment %}
+                <input type="submit" value="SAVE" class="btn bg-mycolor text-light" style="background:blue;"/>
                  </form>
                 </div>
-            <div class="col-sm-5 pic mt-4">
-          {% comment %} <img src="{% static 'C:\Users\sharm\OneDrive\Desktop\Zepto\Final Project\MyProject\static\images\signup3.jpg'%}" class="images"/> {% endcomment %}
                 <div class="row" id="r1">
 
                     <i style="font-family:STXinwei;font-size:50px;margin-top:80px;margin-left:80px;"class="text-light"><i class="fa-regular fa-hand-point-left fa-beat-fade"></i> Register Here</i>
@@ -97,5 +100,6 @@
    </div>
  </div>
 </div>
+{% endblock content %}
 </body>
 <html>

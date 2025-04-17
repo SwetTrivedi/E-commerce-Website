@@ -19,6 +19,9 @@ from django.urls import path
 from shop import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('signup/', views.signup),
+    path('', views.home, name='home'),
+    path('signup/', views.signup,name='usersignup'),
+    path('login/', views.user_login,name='userlogin'),
+    path('userdashboard/', views.userdashboard,name='commondashboard'),
+    path('userlogout/', views.user_logout,name='logout'),
 ]
