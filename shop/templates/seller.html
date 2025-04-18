@@ -3,12 +3,13 @@
 {% block content %}
 <div class="col-sm-5" style="margin-left: 250px;">
   
-  <h3 class="text-white my-4" ><i>SignUp</i></h3>
-   <form action="" method='POST'>
+  <h3 class="text-white my-4" ><i>Seller SignUp</i></h3>
+  <form action="" method='POST'>
   {% csrf_token %} 
       {% for fm in form %}
       <div class="form-group">
           {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}
+          {% comment %} {{form.as_p}} {% endcomment %}
       </div>
       {% endfor %}<br>
       <input type="submit" value="Submit" class="btn btn-info">
@@ -16,5 +17,3 @@
   
 </div>
 {% endblock content %}
-</body>
-<html>

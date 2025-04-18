@@ -21,7 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('signup/', views.signup,name='usersignup'),
-    path('login/', views.user_login,name='userlogin'),
+    path('login/', views.userlogin,name='userlogin'),
     path('userdashboard/', views.userdashboard,name='commondashboard'),
     path('userlogout/', views.user_logout,name='logout'),
+    path('verify-otp/', views.verify_otp, name='verify_otp'),
+    path('seller_page/', views.seller, name='seller'),
+    path('sellerdashboard_page/', views.sellerdashboard, name='sellerdash'),
 ]

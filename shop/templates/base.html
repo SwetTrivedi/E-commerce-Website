@@ -91,18 +91,19 @@
               </li>
               {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'commondashboard' %}">Dashboard</a>
+                  <a class="nav-link" href="{% url 'commondashboard' %}">My profile</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </li>
               {% endif %}
+              {% comment %} {% if request.user == 'seller' %} {% endcomment %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Seller</a></li>
+                  <li><a class="dropdown-item" href="{% url 'seller' %}">Seller</a></li>
                   <li><a class="dropdown-item" href="#">Admin</a></li>
                 </ul>
               </li>
